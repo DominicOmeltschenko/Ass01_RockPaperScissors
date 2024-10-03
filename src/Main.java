@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -48,7 +50,47 @@ public class Main {
 
 
 
+                Scanner in = new Scanner(System.in);
+                String playerA = "";
+                String playerB = "";
+                String trash = "";
 
+                boolean done = false;
+                do
+                {
+                    System.out.print("What is your choice Player A, please type your choice in the form of a capital letter I.E R = Rock: ");
+                    if(in.hasNextLine())
+                    {
+                        playerA = in.nextLine();
+                        done = true;
+                    }
+                    else
+                    {
 
+                        trash = in.nextLine();
+                        System.out.println("" + trash);
+                        System.out.println("");
+                        done = false;
+                    }
+                }while(!done);
+                do
+                {
+                    System.out.print("What is your choice Player B, please type your choice in the form of a capital letter I.E R = Rock: ");
+                    if(in.hasNextLine())
+                    {
+                        playerB = in.nextLine();
+                        done = true;
+                    }
+                    else
+                    {
+
+                    trash = in.nextLine();
+                    System.out.println("" + trash);
+                    System.out.println("");
+                    done = false;
+                    }
+                }while(!done);
+              System.out.println(playerA);
+              System.out.println(playerB);
     }
 }
